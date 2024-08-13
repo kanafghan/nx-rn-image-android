@@ -1,11 +1,12 @@
+import { Building, Loader } from '@nx-rn-image-android/shared-ui';
 import React from 'react';
 import {
   SafeAreaView,
-  StyleSheet,
   ScrollView,
-  View,
   StatusBar,
-  Image,
+  StyleSheet,
+  View,
+  Text,
 } from 'react-native';
 
 export const App = () => {
@@ -22,15 +23,11 @@ export const App = () => {
           style={styles.scrollView}
         >
           <View style={styles.section}>
-            <Image
-              style={{ width: 42, height: 42 }}
-              source={require('./loading.gif')}
-            />
+            <Text style={{ color: '#afafaf', fontSize: 22 }}>Nx RN Image</Text>
 
-            <Image
-              style={{ width: 42, height: 42 }}
-              source={require('./building.jpeg')}
-            />
+            <Loader width={64} height={64} />
+
+            <Building width={102} height={68} />
           </View>
         </ScrollView>
       </SafeAreaView>
